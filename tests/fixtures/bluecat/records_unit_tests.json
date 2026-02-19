@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 2001,
+      "name": "www",
+      "type": "ARecord",
+      "ttl": 300,
+      "rdata": "1.2.3.4"
+    },
+    {
+      "id": 2002,
+      "name": "www",
+      "type": "ARecord",
+      "ttl": 300,
+      "rdata": "1.2.3.5"
+    },
+    {
+      "id": 2003,
+      "name": "aaaa",
+      "type": "AAAARecord",
+      "ttl": 300,
+      "rdata": "2001:db8::1"
+    },
+    {
+      "id": 2004,
+      "name": "alias",
+      "type": "AliasRecord",
+      "ttl": 300,
+      "linkedRecord": {"absoluteName": "www.unit.tests"}
+    },
+    {
+      "id": 2005,
+      "name": "unit.tests.",
+      "absoluteName": "unit.tests",
+      "type": "MXRecord",
+      "ttl": 300,
+      "priority": 10,
+      "linkedRecord": {"absoluteName": "smtp.unit.tests"}
+    },
+    {
+      "id": 2006,
+      "name": "unit.tests.",
+      "absoluteName": "unit.tests",
+      "type": "MXRecord",
+      "ttl": 300,
+      "priority": 20,
+      "linkedRecord": {"absoluteName": "smtp2.unit.tests"}
+    },
+    {
+      "id": 2007,
+      "name": "txt",
+      "type": "TXTRecord",
+      "ttl": 600,
+      "text": "some text record value"
+    },
+    {
+      "id": 2008,
+      "name": "txt",
+      "type": "TXTRecord",
+      "ttl": 600,
+      "text": "another value"
+    },
+    {
+      "id": 2009,
+      "name": "unit.tests.",
+      "type": "NSRecord",
+      "ttl": 3600,
+      "rdata": "ns1.unit.tests."
+    },
+    {
+      "id": 2010,
+      "name": "unit.tests.",
+      "type": "NSRecord",
+      "ttl": 3600,
+      "rdata": "ns2.unit.tests."
+    },
+    {
+      "id": 2011,
+      "name": "_sip._tcp",
+      "type": "SRVRecord",
+      "ttl": 300,
+      "rdata": {
+        "priority": 10,
+        "weight": 20,
+        "port": 5060,
+        "target": "sip.unit.tests."
+      }
+    },
+    {
+      "id": 2012,
+      "name": "unit.tests.",
+      "type": "CAARecord",
+      "ttl": 3600,
+      "rdata": {
+        "flags": 0,
+        "tag": "issue",
+        "value": "letsencrypt.org"
+      }
+    }
+  ],
+  "count": 12,
+  "totalCount": 12
+}

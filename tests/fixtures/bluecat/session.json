@@ -1,0 +1,19 @@
+{
+    "id": 160830,
+    "type": "UserSession",
+    "apiToken": "raw-api-token-not-used",
+    "basicAuthenticationCredentials": "test-bearer-token-abc123",
+    "apiTokenExpirationDateTime": "2026-02-19T13:52:00Z",
+    "state": "LOGGED_IN",
+    "readOnly": false,
+    "user": {
+        "id": 2734995,
+        "type": "User",
+        "name": "bamcli",
+        "_links": {
+            "self": {
+                "href": "/api/v2/users/2734995"
+            }
+        }
+    }
+}

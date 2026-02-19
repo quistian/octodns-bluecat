@@ -1,0 +1,34 @@
+---
+# Example octodns config for BlueCat BAM provider
+# Place at e.g. config/octodns.yaml
+
+providers:
+  # Source of truth: a YAML directory or another provider
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: ./zones
+
+  # BlueCat BAM target
+  bluecat:
+    class: octodns_bluecat.BlueCatProvider
+
+    # BAM base URL — no trailing slash
+    base_url: https://bam.corp.example.com
+
+    # Credentials — use env/ prefix to read from environment variables
+    username: env/BLUECAT_USER
+    password: env/BLUECAT_PASS
+
+    # The BAM DNS View name that all records live inside
+    view: InternalView
+
+    # Optional tuning
+    page_size: 100      # records per API page (default: 100)
+    timeout: 30         # HTTP timeout in seconds (default: 30)
+
+zones:
+  unit.tests.:
+    sources:
+      - config
+    targets:
+      - bluecat

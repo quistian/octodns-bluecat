@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "id": 1001,
+      "name": "unit.tests",
+      "type": "Zone",
+      "deployable": true,
+      "viewId": 42
+    }
+  ],
+  "count": 1,
+  "totalCount": 1
+}

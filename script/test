@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# script/test — run the full test suite
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(dirname "$SCRIPT_DIR")"
+
+cd "$ROOT"
+
+echo "==> Installing dependencies"
+pip install -e ".[dev]" -q
+
+echo "==> Running tests"
+pytest tests/ -v --tb=short "$@"

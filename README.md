@@ -92,8 +92,9 @@ contributing to this provider.
 
 ```bash
 # Clone and install for development
-git clone https://github.com/your-org/octodns-bluecat
+git clone https://github.com/quistian/octodns-bluecat
 cd octodns-bluecat
+uv venv
 pip install -e ".[dev]"
 
 # Run the test suite

@@ -16,11 +16,13 @@ providers:
     base_url: https://bam.corp.example.com
 
     # Credentials — use env/ prefix to read from environment variables
-    username: env/BLUECAT_USER
-    password: env/BLUECAT_PASS
+    username: env/BAM_USER
+    password: env/BAM_PW
 
-    # The BAM DNS View name that all records live inside
-    view: InternalView
+    # BAM Configuration name. required
+    confname: env/BAM_CONF
+    # BAM Configuration name. required
+    view: env/BAM_VIEW
 
     # Optional tuning
     page_size: 100      # records per API page (default: 100)
